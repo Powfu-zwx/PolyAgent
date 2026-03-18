@@ -1,0 +1,80 @@
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+
+# ============================================================
+# Virtual Environments
+# ============================================================
+.venv/
+venv/
+env/
+gov-llm/
+
+# ============================================================
+# Environment Variables
+# ============================================================
+.env
+.env.local
+.env.production
+
+# ============================================================
+# PolyAgent — Knowledge Base & Vector Store
+# ============================================================
+# Raw document corpus (3343 md files, ~50MB+)
+# Run `python -m knowledge.vectorstore --build` to regenerate
+knowledge/data/policy/
+knowledge/data/procedure/
+knowledge/data/notice/
+knowledge/data/service/
+
+# Chroma persistent index (generated from knowledge/data/)
+knowledge/chroma_db/
+
+# Raw data archive (pre-conversion txt files)
+raw_data/
+
+# ============================================================
+# Legacy Code
+# ============================================================
+legacy/
+
+# ============================================================
+# IDE & Editor
+# ============================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ============================================================
+# Testing & Coverage
+# ============================================================
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# ============================================================
+# Logs
+# ============================================================
+*.log
+convert_errors.log
+
+# ============================================================
+# Misc
+# ============================================================
+*.bak
+*.tmp

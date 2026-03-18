@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PolyAgent Campus</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <div class="brand-mark">P</div>
+        <button id="newChatBtn" class="rail-button" type="button" aria-label="新建会话">+</button>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="sidebar-dot"></div>
+      </div>
+    </aside>
+
+    <div class="main-shell">
+      <header class="topbar">
+        <div class="topbar-title">
+          <span class="title-main">PolyAgent</span>
+          <span class="title-sub">Campus</span>
+        </div>
+        <div class="topbar-badge">校园知识库</div>
+      </header>
+
+      <div id="statusStrip" class="status-strip hidden"></div>
+
+      <main id="workspace" class="workspace is-empty">
+        <div id="emptyState" class="empty-state">
+          <h1>有什么可以帮忙的？</h1>
+          <p>校园知识问答、材料摘要、公文写作，都可以直接开始。</p>
+        </div>
+
+        <section id="messages" class="messages" aria-live="polite"></section>
+
+        <div class="composer-zone">
+          <form id="composerForm" class="composer" enctype="multipart/form-data">
+            <label class="sr-only" for="messageInput">输入内容</label>
+            <textarea
+              id="messageInput"
+              class="composer-input"
+              placeholder="有问题，尽管问"
+              rows="1"
+            ></textarea>
+
+            <div id="fileMeta" class="file-meta hidden">
+              <span id="fileName" class="file-chip"></span>
+              <button id="removeFileBtn" class="mini-button" type="button">移除</button>
+            </div>
+
+            <div class="composer-toolbar">
+              <div class="toolbar-left">
+                <input id="fileInput" name="uploaded_file" type="file" hidden accept=".txt,.md,.pdf,.docx">
+                <button id="attachBtn" class="toolbar-button" type="button">上传文件</button>
+                <div class="cap-badge">问答 / 摘要 / 写作</div>
+              </div>
+              <div class="toolbar-right">
+                <button id="sendBtn" class="send-button" type="submit" aria-label="发送">↑</button>
+              </div>
+            </div>
+          </form>
+
+          <div id="promptBar" class="prompt-bar">
+            <button class="prompt-chip" type="button" data-prompt="奖学金申请条件是什么？">奖学金申请</button>
+            <button class="prompt-chip" type="button" data-prompt="报销流程怎么走？一步步教我。">报销流程</button>
+            <button class="prompt-chip" type="button" data-prompt="帮我写一份请假申请，请假人张三，因感冒需请假两天。">请假申请</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <template id="messageTemplate">
+    <article class="message-row">
+      <div class="avatar"></div>
+      <div class="message-card">
+        <div class="message-content"></div>
+        <div class="message-meta hidden">
+          <div class="meta-chips"></div>
+          <button class="reasoning-toggle hidden" type="button">查看意图思路</button>
+        </div>
+        <div class="reasoning-panel hidden"></div>
+      </div>
+    </article>
+  </template>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
