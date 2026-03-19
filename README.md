@@ -10,15 +10,15 @@ The current repository ships with Chinese prompts, examples, and UI copy, but th
 
 Desktop home
 
-![PolyAgent desktop home](./docs/images/polyagent-home-desktop.png)
+![PolyAgent desktop home](./docs/images/polyagent-home-desktop-en.png)
 
 Feature highlights
 
 | Multi-agent orchestration | Document summarization |
 | --- | --- |
-| ![PolyAgent multi-agent flow](./docs/images/polyagent-feature-multi-agent.png) | ![PolyAgent summary workflow](./docs/images/polyagent-feature-summary.png) |
+| ![PolyAgent multi-agent flow](./docs/images/polyagent-feature-multi-agent-en.png) | ![PolyAgent summary workflow](./docs/images/polyagent-feature-summary-en.png) |
 | Formal writing | Step-by-step guidance |
-| ![PolyAgent writing workflow](./docs/images/polyagent-feature-writing.png) | ![PolyAgent guide workflow](./docs/images/polyagent-feature-guide.png) |
+| ![PolyAgent writing workflow](./docs/images/polyagent-feature-writing-en.png) | ![PolyAgent guide workflow](./docs/images/polyagent-feature-guide-en.png) |
 
 ## What It Can Do
 
@@ -102,6 +102,8 @@ README screenshots can be regenerated with:
 python -m pip install selenium
 python scripts/generate_readme_screenshots.py
 ```
+
+This script generates both English (`*-en.png`) and Simplified Chinese (`*-zh.png`) variants.
 
 ## Tech Stack
 
