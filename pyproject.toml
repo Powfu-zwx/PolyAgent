@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "polyagent"
+version = "0.1.0"
+description = "A multi-agent workspace for knowledge-heavy service workflows."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Powfu-zwx" },
+]
+keywords = [
+  "multi-agent",
+  "langgraph",
+  "rag",
+  "knowledge-base",
+  "gradio",
+  "document-summarization",
+  "workflow-assistant",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dynamic = ["dependencies"]
+
+[project.optional-dependencies]
+assets = [
+  "Pillow>=10.0",
+  "selenium>=4.20",
+]
+
+[project.urls]
+Homepage = "https://github.com/Powfu-zwx/PolyAgent"
+Repository = "https://github.com/Powfu-zwx/PolyAgent"
+Issues = "https://github.com/Powfu-zwx/PolyAgent/issues"
+Changelog = "https://github.com/Powfu-zwx/PolyAgent/blob/main/CHANGELOG.md"
+Roadmap = "https://github.com/Powfu-zwx/PolyAgent/blob/main/ROADMAP.md"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agents*", "config*", "core*", "knowledge*"]
+exclude = ["docs*", "frontend*", "legacy*", "scripts*", "tests*"]

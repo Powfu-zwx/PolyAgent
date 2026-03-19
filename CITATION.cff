@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: PolyAgent
+message: "If you use PolyAgent in research, demos, or derivative systems, please cite this repository."
+type: software
+version: 0.1.0
+date-released: 2026-03-19
+license: MIT
+authors:
+  - alias: Powfu-zwx
+repository-code: "https://github.com/Powfu-zwx/PolyAgent"
+url: "https://github.com/Powfu-zwx/PolyAgent"
+abstract: "PolyAgent is a multi-agent workspace that combines grounded QA, document summarization, formal writing, and step-by-step guidance in one chat interface."
+keywords:
+  - multi-agent
+  - langgraph
+  - rag
+  - knowledge-base
+  - gradio
+  - workflow-assistant

@@ -31,7 +31,7 @@ def test_index_serves_custom_frontend() -> None:
     response = client.get("/")
 
     assert response.status_code == 200
-    assert "PolyAgent Campus" in response.text
+    assert "PolyAgent Workspace" in response.text
 
 
 def test_chat_endpoint_returns_assistant_payload() -> None:

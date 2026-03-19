@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PolyAgent Campus</title>
+  <title>PolyAgent Workspace</title>
   <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
@@ -22,9 +22,9 @@
       <header class="topbar">
         <div class="topbar-title">
           <span class="title-main">PolyAgent</span>
-          <span class="title-sub">Campus</span>
+          <span class="title-sub">智能工作台</span>
         </div>
-        <div class="topbar-badge">校园知识库</div>
+        <div class="topbar-badge">多智能体助手</div>
       </header>
 
       <div id="statusStrip" class="status-strip hidden"></div>
@@ -32,7 +32,7 @@
       <main id="workspace" class="workspace is-empty">
         <div id="emptyState" class="empty-state">
           <h1>有什么可以帮忙的？</h1>
-          <p>校园知识问答、材料摘要、公文写作，都可以直接开始。</p>
+          <p>知识问答、文档摘要、正式写作、流程引导，都可以直接开始。</p>
         </div>
 
         <section id="messages" class="messages" aria-live="polite"></section>
@@ -43,7 +43,7 @@
             <textarea
               id="messageInput"
               class="composer-input"
-              placeholder="有问题，尽管问"
+              placeholder="输入问题、文档处理需求，或让它帮你起草内容"
               rows="1"
             ></textarea>
 
@@ -56,7 +56,7 @@
               <div class="toolbar-left">
                 <input id="fileInput" name="uploaded_file" type="file" hidden accept=".txt,.md,.pdf,.docx">
                 <button id="attachBtn" class="toolbar-button" type="button">上传文件</button>
-                <div class="cap-badge">问答 / 摘要 / 写作</div>
+                <div class="cap-badge">问答 / 摘要 / 写作 / 引导</div>
               </div>
               <div class="toolbar-right">
                 <button id="sendBtn" class="send-button" type="submit" aria-label="发送">↑</button>
@@ -65,9 +65,9 @@
           </form>
 
           <div id="promptBar" class="prompt-bar">
-            <button class="prompt-chip" type="button" data-prompt="奖学金申请条件是什么？">奖学金申请</button>
-            <button class="prompt-chip" type="button" data-prompt="报销流程怎么走？一步步教我。">报销流程</button>
-            <button class="prompt-chip" type="button" data-prompt="帮我写一份请假申请，请假人张三，因感冒需请假两天。">请假申请</button>
+            <button class="prompt-chip" type="button" data-prompt="帮我总结这份通知的关键点和待办事项。">通知摘要</button>
+            <button class="prompt-chip" type="button" data-prompt="请一步步说明项目报销该怎么处理。">报销流程</button>
+            <button class="prompt-chip" type="button" data-prompt="帮我起草一封系统升级维护通知。">维护通知</button>
           </div>
         </div>
       </main>
