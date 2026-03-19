@@ -44,9 +44,9 @@ _MAX_USER_INPUT_LENGTH = 10000
 _INVOKE_TIMEOUT_SECONDS = 120
 _READY_STATUS_TEXT = ""
 _QUICK_PROMPTS: tuple[str, ...] = (
-    "奖学金申请条件是什么？",
-    "报销流程怎么走？一步步教我。",
-    "帮我写一份请假申请，请假人张三，因感冒需请假两天。",
+    "帮我总结这份通知的关键点和待办事项。",
+    "请一步步说明项目报销该怎么处理。",
+    "帮我起草一封系统升级维护通知。",
 )
 
 _APP_THEME = (
@@ -514,20 +514,20 @@ _SIDEBAR_HTML = """
 _TOPBAR_HTML = """
 <div class="topbar">
   <div class="topbar-title">
-    PolyAgent <span>Campus</span>
+    PolyAgent <span>智能工作台</span>
   </div>
-  <div class="topbar-pill">校园知识库</div>
+  <div class="topbar-pill">多智能体助手</div>
 </div>
 """
 
 _FEATURE_BADGE_HTML = """
-<div class="cap-badge">问答 / 摘要 / 写作</div>
+<div class="cap-badge">问答 / 摘要 / 写作 / 引导</div>
 """
 
 _CHAT_PLACEHOLDER = """
 ## 有什么可以帮忙的？
 
-校园知识问答、材料摘要、公文写作，都可以直接开始。
+知识问答、文档摘要、正式写作、流程引导，都可以直接开始。
 """
 
 
@@ -942,7 +942,7 @@ def _prefill_prompt(prompt: str) -> str:
 def create_demo(graph: Any) -> gr.Blocks:
     """Build Gradio Blocks UI and bind callbacks."""
     with gr.Blocks(
-        title="PolyAgent | Conversational Workspace",
+        title="PolyAgent | 智能工作台",
         theme=_APP_THEME,
         css=_CUSTOM_CSS,
         fill_height=True,
@@ -981,7 +981,7 @@ def create_demo(graph: Any) -> gr.Blocks:
 
                 with gr.Column(elem_id="composer-shell"):
                     user_input = gr.Textbox(
-                        placeholder="有问题，尽管问",
+                        placeholder="输入问题、文档处理需求，或让它帮你起草内容",
                         lines=3,
                         max_lines=8,
                         show_label=False,
